@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu_Seleccion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menú de selección</h1>
+
+    <label for="category">Unidad de negocio:</label>
+    <select id="category" name="category">
+        <option value="climaterio">Climaterio</option>
+        <option value="obstetricia">Obstetricia</option>
+        <option value="ginecologia">Ginecología</option>
+    </select>
+
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Ciclo 1</th>
+                <th>Ciclo 2</th>
+                <th>Ciclo 3</th>
+                <th>Ciclo 4</th>
+                <th>Ciclo 5</th>
+                <th>Ciclo 6</th>
+                <th>Ciclo 7</th>
+                <th>Ciclo 8</th>
+                <th>Ciclo 9</th>
+                <th>Ciclo 10</th>
+                <th>Ciclo 11</th>
+                <th>Ciclo 12</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CUP A</td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="1" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="2" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="3" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="4" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="5" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="6" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="7" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="8" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="9" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="10" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="11" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP A" data-cycle="12" /></td>
+            </tr>
+            <tr>
+                <td>CUP B</td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="1" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="2" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="3" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="4" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="5" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="6" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="7" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="8" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="9" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="10" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="11" /></td>
+                <td><input type="checkbox" class="cycle" data-description="CUP B" data-cycle="12" /></td>
+            </tr>
+            <!-- Agrega más filas si es necesario -->
+        </tbody>
+    </table>
+
+    <br>
+    <button id="saveButton">Guardar selección</button>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        document.getElementById('saveButton').addEventListener('click', () => {
+            const selectedCategory = document.getElementById('category').value;
+            const checkedCycles = Array.from(document.querySelectorAll('.cycle:checked'));
+
+            const results = checkedCycles.map(checkbox => {
+                return `Descripción: ${checkbox.dataset.description}, Ciclo: ${checkbox.dataset.cycle}`;
+            });
+
+            const output = document.getElementById('output');
+            output.innerHTML = `<h2>Resultados:</h2>
+                                <p>Unidad de negocio seleccionada: ${selectedCategory}</p>
+                                <ul>${results.map(result => `<li>${result}</li>`).join('')}</ul>`;
+        });
+    </script>
+</body>
+</html>
