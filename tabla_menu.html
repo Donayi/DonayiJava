@@ -9,6 +9,20 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -45,11 +59,21 @@
         }
     </style>
 </head>
-<body>
-    <h1>Menú de selección</h1>
 
-    <label for="category">Unidad de negocio:</label>
-    <select id="category" name="category">
+<body>
+
+    <nav>
+        <a href="#88">Contactos</a>
+        <a href="#505">Resumen</a>
+        <a href="#546">Parrilla</a>
+        
+    </nav>
+    <h1 style="text-align: right;">Menú de selección</h1>
+    
+    <br><br><br>
+
+    <label for="category" style="color:darkorange;" >Unidad de negocio:</label>
+    <select id="category" name="category" style="color: darkblue;">
         <option disabled selected>-Elige una opcion</option>
         <option value="climaterio">Climaterio</option>
         <option value="obstetricia">Obstetricia</option>
@@ -481,7 +505,7 @@
         <legend>Resumen</legend>
         <div class="totals" id="totals">
             <div id="climaterioTotals">
-                <h3>Climaterio</h3>
+                <h3 style="text-align: center; color: red;">Climaterio</h3>
                 <table>
                     <thead>
                         <tr>
@@ -493,7 +517,7 @@
                 </table>
             </div>
             <div id="obstetriciaTotals">
-                <h3>Obstetricia</h3>
+                <h3 style="text-align: center;color: red;">Obstetricia</h3>
                 <table>
                     <thead>
                         <tr>
@@ -505,7 +529,7 @@
                 </table>
             </div>
             <div id="ginecologiaTotals">
-                <h3>Ginecología</h3>
+                <h3 style="text-align: center;color: red;">Ginecología</h3>
                 <table>
                     <thead>
                         <tr>
@@ -519,11 +543,11 @@
         </div>
     </fieldset>
 
-<fieldset style="color: blue;">
+<fieldset style="color: darkblue;;">
     <legend>Parrilla</legend>
     <div class="summary" id="summary">
         <div id="climaterioSummary">
-            <h3>Climaterio</h3>
+            <h3 style="text-align: center;color: red;">Climaterio</h3>
             <table>
                 <thead>
                     <tr>
@@ -536,7 +560,7 @@
             </table>
         </div>
         <div id="obstetriciaSummary">
-            <h3>Obstetricia</h3>
+            <h3 style="text-align: center;color: red;">Obstetricia</h3>
             <table>
                 <thead>
                     <tr>
@@ -549,7 +573,7 @@
             </table>
         </div>
         <div id="ginecologiaSummary">
-            <h3>Ginecología</h3>
+            <h3 style="text-align: center;color: red;">Ginecología</h3>
             <table>
                 <thead>
                     <tr>
