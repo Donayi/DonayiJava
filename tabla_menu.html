@@ -27,6 +27,22 @@
         .output {
             margin-top: 20px;
         }
+        .summary {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+        .summary > div {
+            flex: 1;
+        }
+        .totals {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .totals > div {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +50,7 @@
 
     <label for="category">Unidad de negocio:</label>
     <select id="category" name="category">
+        <option disabled selected>-Elige una opcion</option>
         <option value="climaterio">Climaterio</option>
         <option value="obstetricia">Obstetricia</option>
         <option value="ginecologia">Ginecología</option>
@@ -57,8 +74,10 @@
                 <th>Ciclo 10</th>
                 <th>Ciclo 11</th>
                 <th>Ciclo 12</th>
-                <th>Select All</th>
+                <th>Seleccionar Todos</th>
             </tr>
+
+
         </thead>
         <tbody>
             <tr>
@@ -75,7 +94,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP BELLAFEM MATERNAL" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP BELLAFEM MATERNAL" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP BELLAFEM MATERNAL" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP BELLAFEM MATERNAL">All</button></td>
+                <td><button class="select-all" data-row="CUP BELLAFEM MATERNAL">Todos</button></td>
             </tr>
             <tr>
                 <td>CUP BONJESTA</td>
@@ -91,7 +110,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP BONJESTA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP BONJESTA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP BONJESTA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP BONJESTA">All</button></td>
+                <td><button class="select-all" data-row="CUP BONJESTA">Todos</button></td>
             </tr>
             <tr>
                 <td>CUP EVEMGLEA</td>
@@ -107,7 +126,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP EVEMGLEA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP EVEMGLEA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP EVEMGLEA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP EVEMGLEA">All</button></td>
+                <td><button class="select-all" data-row="CUP EVEMGLEA">Todos</button></td>
             </tr>
             <tr>
                 <td>CUP FEMEDUAL - GYNOPHILUS RESTORE</td>
@@ -123,7 +142,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP FEMEDUAL - GYNOPHILUS RESTORE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FEMEDUAL - GYNOPHILUS RESTORE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FEMEDUAL - GYNOPHILUS RESTORE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP FEMEDUAL - GYNOPHILUS RESTORE">All</button></td>
+                <td><button class="select-all" data-row="CUP FEMEDUAL - GYNOPHILUS RESTORE">Todos</button></td>
 
             </tr>
             <tr>
@@ -140,7 +159,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP FERREXEL - NOCELE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FERREXEL - NOCELE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FERREXEL - NOCELE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP FERREXEL - NOCELE">All</button></td>
+                <td><button class="select-all" data-row="CUP FERREXEL - NOCELE">Todos</button></td>
 
             </tr>
             <tr>
@@ -157,7 +176,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP FISIOFER" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FISIOFER" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP FISIOFER" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP FISIOFER">All</button></td>
+                <td><button class="select-all" data-row="CUP FISIOFER">Todos</button></td>
 
             </tr>
             <tr>
@@ -174,7 +193,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP CISTEXEL - FOSUNE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP CISTEXEL - FOSUNE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP CISTEXEL - FOSUNE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP CISTEXEL - FOSUNE">All</button></td>
+                <td><button class="select-all" data-row="CUP CISTEXEL - FOSUNE">Todos</button></td>
 
             </tr>
             <tr>
@@ -191,7 +210,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP GESTAGENO - PAZ OB" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GESTAGENO - PAZ OB" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GESTAGENO - PAZ OB" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP GESTAGENO - PAZ OB">All</button></td>
+                <td><button class="select-all" data-row="CUP GESTAGENO - PAZ OB">Todos</button></td>
 
             </tr>
             <tr>
@@ -208,7 +227,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP GYNOTRAN - XANELLE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GYNOTRAN - XANELLE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GYNOTRAN - XANELLE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP GYNOTRAN - XANELLE">All</button></td>
+                <td><button class="select-all" data-row="CUP GYNOTRAN - XANELLE">Todos</button></td>
 
             </tr>
             <tr>
@@ -225,7 +244,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP IDYLLA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP IDYLLA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP IDYLLA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP IDYLLA">All</button></td>
+                <td><button class="select-all" data-row="CUP IDYLLA">Todos</button></td>
 
             </tr>
             <tr>
@@ -242,7 +261,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP INOFOLIC HP - MILEVA 35" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP INOFOLIC HP - MILEVA 35" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP INOFOLIC HP - MILEVA 35" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP INOFOLIC HP - MILEVA 35">All</button></td>
+                <td><button class="select-all" data-row="CUP INOFOLIC HP - MILEVA 35">Todos</button></td>
 
             </tr>
             <tr>
@@ -259,7 +278,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP LIVIAXAN - XANELLE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP LIVIAXAN - XANELLE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP LIVIAXAN - XANELLE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP LIVIAXAN - XANELLE">All</button></td>
+                <td><button class="select-all" data-row="CUP LIVIAXAN - XANELLE">Todos</button></td>
 
             </tr>
             <tr>
@@ -276,7 +295,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP MILDA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP MILDA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP MILDA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP MILDA">All</button></td>
+                <td><button class="select-all" data-row="CUP MILDA">Todos</button></td>
 
             </tr>
             <tr>
@@ -293,7 +312,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP REGENESIS MAX" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP REGENESIS MAX" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP REGENESIS MAX" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP REGENESIS MAX">All</button></td>
+                <td><button class="select-all" data-row="CUP REGENESIS MAX">Todos</button></td>
 
             </tr>
             <tr>
@@ -310,7 +329,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP SANDRENA - GESTAGENO" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SANDRENA - GESTAGENO" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SANDRENA - GESTAGENO" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP SANDRENA - GESTAGENO">All</button></td>
+                <td><button class="select-all" data-row="CUP SANDRENA - GESTAGENO">Todos</button></td>
 
             </tr>
             <tr>
@@ -327,7 +346,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP SIENNA - VIPLENA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SIENNA - VIPLENA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SIENNA - VIPLENA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP SIENNA - VIPLENA">All</button></td>
+                <td><button class="select-all" data-row="CUP SIENNA - VIPLENA">Todos</button></td>
 
             </tr>
             <tr>
@@ -344,7 +363,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP GINORELLE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GINORELLE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP GINORELLE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP GINORELLE">All</button></td>
+                <td><button class="select-all" data-row="CUP GINORELLE">Todos</button></td>
 
             </tr>
             <tr>
@@ -361,7 +380,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP SLINDA" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SLINDA" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP SLINDA" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP SLINDA">All</button></td>
+                <td><button class="select-all" data-row="CUP SLINDA">Todos</button></td>
 
             </tr>
             <tr>
@@ -378,7 +397,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL - TRANSVITAL D" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL - TRANSVITAL D" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL - TRANSVITAL D" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP TRANSVITAL - TRANSVITAL D">All</button></td>
+                <td><button class="select-all" data-row="CUP TRANSVITAL - TRANSVITAL D">Todos</button></td>
 
             </tr>
             <tr>
@@ -395,7 +414,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL E" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL E" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRANSVITAL E" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP TRANSVITAL E">All</button></td>
+                <td><button class="select-all" data-row="CUP TRANSVITAL E">Todos</button></td>
 
             </tr>
             <tr>
@@ -412,7 +431,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP TRILEXA - GYNOPHILUS RESTORE" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRILEXA - GYNOPHILUS RESTORE" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TRILEXA - GYNOPHILUS RESTORE" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP TRILEXA - GYNOPHILUS RESTORE">All</button></td>
+                <td><button class="select-all" data-row="CUP TRILEXA - GYNOPHILUS RESTORE">Todos</button></td>
 
             </tr>
             <tr>
@@ -429,7 +448,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP TURNOVER" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TURNOVER" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP TURNOVER" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP TURNOVER">All</button></td>
+                <td><button class="select-all" data-row="CUP TURNOVER">Todos</button></td>
 
             </tr>
             <tr>
@@ -446,7 +465,7 @@
                 <td><input type="checkbox" class="cycle" data-description="CUP MAKZIM" data-cycle="10" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP MAKZIM" data-cycle="11" /></td>
                 <td><input type="checkbox" class="cycle" data-description="CUP MAKZIM" data-cycle="12" /></td>
-                <td><button class="select-all" data-row="CUP MAKZIM">All</button></td>
+                <td><button class="select-all" data-row="CUP MAKZIM">Todos</button></td>
 
             </tr>
             <!-- Agrega más filas si es necesario -->
@@ -458,7 +477,121 @@
 
     <div class="output" id="output"></div>
 
+    <fieldset style="color: darkblue;">
+        <legend>Resumen</legend>
+        <div class="totals" id="totals">
+            <div id="climaterioTotals">
+                <h3>Climaterio</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="obstetriciaTotals">
+                <h3>Obstetricia</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="ginecologiaTotals">
+                <h3>Ginecología</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+
+<fieldset style="color: blue;">
+    <legend>Parrilla</legend>
+    <div class="summary" id="summary">
+        <div id="climaterioSummary">
+            <h3>Climaterio</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Descripción</th>
+                        <th>Unidad de negocio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="obstetriciaSummary">
+            <h3>Obstetricia</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Descripción</th>
+                        <th>Unidad de negocio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="ginecologiaSummary">
+            <h3>Ginecología</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Descripción</th>
+                        <th>Unidad de negocio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</fieldset>
+
     <script>
+        const savedSelections = {};
+
+        document.getElementById('category').addEventListener('change', (event) => {
+            const previousCategory = event.target.getAttribute('data-previous') || '';
+            const currentCategory = event.target.value;
+
+            if (previousCategory) {
+                // Save the current selections
+                const checkboxes = document.querySelectorAll('.cycle');
+                savedSelections[previousCategory] = Array.from(checkboxes).map(checkbox => checkbox.checked);
+            }
+
+            // Load the selections for the new category
+            if (savedSelections[currentCategory]) {
+                const checkboxes = document.querySelectorAll('.cycle');
+                savedSelections[currentCategory].forEach((isChecked, index) => {
+                    checkboxes[index].checked = isChecked;
+                });
+            } else {
+                // Clear all checkboxes if no selections are saved
+                document.querySelectorAll('.cycle').forEach(checkbox => checkbox.checked = false);
+            }
+
+            // Update the previous category
+            event.target.setAttribute('data-previous', currentCategory);
+        });
+
         document.querySelectorAll('.select-all').forEach(button => {
             button.addEventListener('click', () => {
                 const rowDescription = button.getAttribute('data-row');
@@ -473,13 +606,44 @@
             const checkedCycles = Array.from(document.querySelectorAll('.cycle:checked'));
 
             const results = checkedCycles.map(checkbox => {
-                return `Descripción: ${checkbox.dataset.description}, Ciclo: ${checkbox.dataset.cycle}`;
+                return {
+                    description: checkbox.dataset.description,
+                    cycle: parseInt(checkbox.dataset.cycle, 10),
+                    category: selectedCategory
+                };
             });
 
+            // Sort results by cycle and then by description
+            results.sort((a, b) => {
+                if (a.cycle === b.cycle) {
+                    return a.description.localeCompare(b.description);
+                }
+                return a.cycle - b.cycle;
+            });
+
+            // Calculate totals
+            const totals = {};
+            results.forEach(result => {
+                if (!totals[result.description]) {
+                    totals[result.description] = 0;
+                }
+                totals[result.description] += 1;
+            });
+
+            // Update the totals tables
+            const totalsBody = document.querySelector(`#${selectedCategory}Totals tbody`);
+            totalsBody.innerHTML = Object.entries(totals).map(([description, count]) => {
+                return `<tr><td>${description}</td><td>${count}</td></tr>`;
+            }).join('');
+
+            // Update the summary tables
+            const tableBody = document.querySelector(`#${selectedCategory}Summary tbody`);
+            tableBody.innerHTML = results.map(result => {
+                return `<tr><td>${result.cycle}</td><td>${result.description}</td><td>${result.category}</td></tr>`;
+            }).join('');
+
             const output = document.getElementById('output');
-            output.innerHTML = `<h2>Resultados:</h2>
-                                <p>Unidad de negocio seleccionada: ${selectedCategory}</p>
-                                <ul>${results.map(result => `<li>${result}</li>`).join('')}</ul>`;
+            output.innerHTML = `<h5>Resultados guardados para ${selectedCategory}</h5>`;
         });
     </script>
 </body>
