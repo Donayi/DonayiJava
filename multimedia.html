@@ -476,45 +476,50 @@
 
     <div class="output" id="output"></div>
 
-    <div class="totals" id="totals">
-        <div id="climaterioTotals">
-            <h3>Climaterio</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descripción</th>
-                        <th>Número de ciclos</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+    <fieldset style="color: darkblue;">
+        <legend>Resumen</legend>
+        <div class="totals" id="totals">
+            <div id="climaterioTotals">
+                <h3>Climaterio</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="obstetriciaTotals">
+                <h3>Obstetricia</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="ginecologiaTotals">
+                <h3>Ginecología</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Número de ciclos</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
-        <div id="obstetriciaTotals">
-            <h3>Obstetricia</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descripción</th>
-                        <th>Número de ciclos</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <div id="ginecologiaTotals">
-            <h3>Ginecología</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descripción</th>
-                        <th>Número de ciclos</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
+    </fieldset>
 
+<fieldset style="color: blue;">
+    <legend>Parrilla</legend>
     <div class="summary" id="summary">
         <div id="climaterioSummary">
             <h3>Climaterio</h3>
@@ -556,6 +561,7 @@
             </table>
         </div>
     </div>
+</fieldset>
 
     <script>
         const savedSelections = {};
