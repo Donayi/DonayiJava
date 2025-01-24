@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web Eventos</title>
+    <meta name="robots" content="index, nfollow">
+    <title>Mi Web Eventos y algo mas</title>
+    <link rel="icon" href="Imagenes/Icono_Mi_Web.png" type="image/png">
+    <!-- Open graph para redes sociales-->
+ 
 </head>
 <body>
     <header>
@@ -12,23 +16,78 @@
     <section>
         <h2>Registrate a nuesto proximo evento</h2>
         <p>Este evento esta dirigido a todas aquellas personas que desean aprender mas sobre la IA y sus aplicaciones en el mundo farmaceutico</p>
-        <form action="index.html" method="get">
+        <form action="index.html" method="post">
             <fieldset>
                 <legend>Registrate</legend>
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" required>
                 <br>
                 <label for="numero">Edad:</label>
-                <input type="number" name="numero" id="numero">
+                <input type="number" name="numero" id="numero" required min="18">
                 <br>
                 <label>Correo: 
                     <input type="email" name="email" id="email">
                 </label>
             </fieldset>
+            <fieldset>
+                <legend>Genero</legend>
+                <label >Hombre
+                    <input type="radio" name="genero" id="hombre" value="hombre">
+                </label>
+                <label >Mujer
+                    <input type="radio" name="genero" id="mujer" value="mujer">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Eventos</legend>
+                <label for="evento">Selecciona un evento</label>
+                <select name="evento" id="evento">
+                    <option value=""></option>
+                    <option value="Bautizo-Sofi">Bautizo Sofia</option>
+                    <option value="Webinar">Webinar de plim plim</option>
+                    <option value="Taller">Taller de compras</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Ciudad de evento</legend>
+                <label for="Ciudad">Ciudad</label>
+                <input list="ciudades" id="ciudad" name="ciudad" required>
+                <datalist id="ciudades">
+                    <option value="Madrid">
+                    <option value="Guadalajara">
+                    <option value="Roma">
+                    <option value="Tokyo">
+                </datalist>
+            </fieldset>
+            
+            
             <input type="submit" value="Enviar">
-
         </form>
+            </section>
+    <section>
+        <h2> Mas informacion sobre los eventos</h2>
+        <details open>
+            <summary>Bautizo Sofia</summary>
+            <div>
+                <p>Se llevara acabo el día 25 de Enero del 2025 en Tlanepantla</p>
+                <ul>
+                    <li>Sabado 25 de enero del 2025</li>
+                    <li>Tlanepantla</li>
+                </ul>
+            </div>
+        </details>
+        <details>
+            <summary>Webinar plimplim</summary>
+            <div>
+                <p>Se conversara sobre la clonacion de canciones por parte de Plim Plim</p>
+                <Ul>
+                    <li>Abejita chiquitita</li>
+                    <li>El cerdito enojon</li>
+                    <li>El autobus</li>
+                </Ul>
+            </div>
 
+        </details>
     </section>
 </body>
 </html>
