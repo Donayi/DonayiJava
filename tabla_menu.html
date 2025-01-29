@@ -9,6 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        header{
+            background-color:darkslategray;
+            text-decoration: none;
+            color: #ccc;
+            display: flex;
+        }
         nav {
             background-color: #333;
             color: white;
@@ -19,10 +25,16 @@
         nav a {
             color: white;
             text-decoration: none;
+
         }
         nav a:hover {
             text-decoration: underline;
         }
+        section{
+            background-color: rgb(180, 174, 174);
+            display: flex;
+        }
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -61,26 +73,39 @@
 </head>
 
 <body>
+    <header>
+        <h1>Menú de selección</h1>
+    </header>
 
     <nav>
         <a href="#88">Contactos</a>
         <a href="#505">Resumen</a>
         <a href="#546">Parrilla</a>
-        
     </nav>
-    <h1 style="text-align: right; color: aqua;">Menú de selección</h1>
+
     
     <br><br><br>
 
-    <label for="category" style="color:darkorange;" >Unidad de negocio:</label>
-    <select id="category" name="category" style="color: darkblue;">
-        <option disabled selected>-Elige una opcion</option>
-        <option value="climaterio">Climaterio</option>
-        <option value="obstetricia">Obstetricia</option>
-        <option value="ginecologia">Ginecología</option>
-    </select>
+    <section class="menuopciones">
+        <div>
+            <label for="category" style="color:darkorange;" >Unidad de negocio:</label>
+            <select id="category" name="category" style="color: darkblue;">
+                <option disabled selected>-Elige una opcion</option>
+                <option value="climaterio">Climaterio</option>
+                <option value="obstetricia">Obstetricia</option>
+                <option value="ginecologia">Ginecología</option>
+            </select>
+            
+        </div>
+        <div class="cargas">
+            <button id="Actual">Actual</button>
+            <button id="Propuesta">Propuesta</button>
+        </div>
 
-    <br><br>
+    </section>
+
+
+    <br><br><br>
 
     <table>
         <thead>
